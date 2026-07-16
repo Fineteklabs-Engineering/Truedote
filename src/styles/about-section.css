@@ -223,11 +223,6 @@
     min-height: unset;
   }
 
-  .about-media {
-    min-height: clamp(320px, 90vw, 420px);
-    max-width: 420px;
-    margin: 0 auto;
-  }
 
   .about-badge {
     position: static;
