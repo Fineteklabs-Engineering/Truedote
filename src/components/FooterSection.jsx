@@ -11,10 +11,10 @@ const CONTACT_DETAILS = [
 ];
 
 const SOCIALS = [
-  { icon: FaTwitter, label: 'Twitter', href: 'https://twitter.com' },
-  { icon: FaLinkedinIn, label: 'LinkedIn', href: 'https://linkedin.com' },
+  { icon: FaTwitter, label: 'Twitter', href: 'https://x.com/truedote' },
+  { icon: FaLinkedinIn, label: 'LinkedIn', href: 'https://www.linkedin.com/company/truedote/' },
   { icon: FaInstagram, label: 'Instagram', href: 'https://instagram.com' },
-  { icon: FaFacebookF, label: 'Facebook', href: 'https://facebook.com' },
+  { icon: FaFacebookF, label: 'Facebook', href: 'https://www.facebook.com/truedote' },
 ];
 
 const NAV_LINKS = [
