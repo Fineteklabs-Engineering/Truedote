@@ -33,6 +33,13 @@ const PRODUCTS = [
     image: '/images/product1.png',
     href: '/products/truebox',
   },
+ {
+  title: 'Pharmacy POS',
+  description:
+    'Point-of-sale system for pharmacies, tying dispensing directly to the patient record to catch interactions and stock issues early.',
+  image: '/images/product2.png',
+  href: '/products/pharmacy-pos',
+},
 ];
 
 // A spring feels far smoother/more physical for a layout animation like this
