@@ -42,9 +42,7 @@ const PRODUCTS = [
 },
 ];
 
-// A spring feels far smoother/more physical for a layout animation like this
-// than a fixed-duration easing curve — it's what `layout` transitions are
-// really designed around.
+
 const CARD_TRANSITION = {
   type: 'spring',
   stiffness: 110,
@@ -64,9 +62,7 @@ const ProductsSection = () => {
 
     let revealTimer;
 
-    // No disconnect() here — toggling isVisible on both enter and exit lets
-    // the stack-reveal replay every time the section scrolls back into
-    // view, not just once per page load.
+  
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -100,8 +96,7 @@ const ProductsSection = () => {
 
       <div className={`products-grid ${isVisible ? 'products-revealed' : 'products-stacked'}`}>
         {PRODUCTS.map((product, index) => {
-          // Reveal back-to-front: the last card unstacks first, then each
-          // earlier card follows — same order the site already uses elsewhere.
+       
           const revealOrder = PRODUCTS.length - 1 - index;
 
           return (
