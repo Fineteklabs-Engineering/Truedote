@@ -5,22 +5,24 @@ import '../styles/navbar.css';
 
 const NAV_LINKS = [
   { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
   { label: 'Products', href: '/products' },
   { label: 'Solutions', href: '/solutions' },
   { label: 'Research', href: '/research' },
   { label: 'Blog', href: '/blog' },
 ];
 
-const Navbar = () => {
+const Navbar = ({ forceLight = false }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
+    if (forceLight) return undefined;
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
     handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [forceLight]);
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? 'hidden' : '';
@@ -39,10 +41,11 @@ const Navbar = () => {
   }, [isMenuOpen]);
 
   const closeMenu = () => setIsMenuOpen(false);
+  const showScrolledStyle = forceLight || isScrolled;
 
   return (
     <>
-      <nav className={`nav ${isScrolled ? 'nav-scrolled' : ''}`} aria-label="Primary">
+      <nav className={`nav ${showScrolledStyle ? 'nav-scrolled' : ''}`} aria-label="Primary">
         <Link to="/" className="logo-link" onClick={closeMenu}>
           <img src="/images/truedote-logo.svg" alt="Truedote" className="logo" />
         </Link>
