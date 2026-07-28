@@ -69,10 +69,7 @@
   position: relative;
 }
 
-/* Before the section is in view: cards sit in a fanned stack instead of
-   their grid slots. The grid keeps flex-wrap layout ready underneath —
-   .product-stacked just lifts each card out of flow and on top of the
-   others via absolute positioning + a slight rotation per card. */
+
 
 .products-grid.products-stacked {
   min-height: 420px;

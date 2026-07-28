@@ -6,7 +6,7 @@ import '../styles/footer-section.css';
 
 const CONTACT_DETAILS = [
   { icon: FiMapPin, label: 'Nairobi, Kenya' },
-  { icon: FiPhone, label: '+254 712 345 678' },
+  { icon: FiPhone, label: '+254 706 059 906' },
   { icon: FiMail, label: 'hello@truedote.com' },
 ];
 
