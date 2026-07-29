@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductsHero from '../components/Productshero'
+import ProductsHero from '../components/ProductsHero'
 import ProductsGrid from '../components/ProductsGrid'
 import ContactSection from '../components/ContactSection'
 import FooterSection from '../components/FooterSection'
