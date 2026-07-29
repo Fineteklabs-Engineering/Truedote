@@ -63,7 +63,7 @@
 }
 
 .solutions-hero-dash {
-  position: relative;           /* new — positioning context for the dot */
+  position: relative;           
   display: inline-block;
   width: clamp(48px, 8vw, 96px);
   height: 3px;
