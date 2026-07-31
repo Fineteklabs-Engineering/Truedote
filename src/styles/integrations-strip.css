@@ -1,0 +1,111 @@
+.integrations-strip {
+  --color-muted: #6b6580;
+  --color-primary: #6c4ff2;
+  --color-primary-dark: #4e31d6;  
+  --color-accent: #22c55e;
+  --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --gutter: clamp(32px, 6vw, 96px);
+
+  background: var(--color-primary-dark);   
+  color: #fff;
+  font-family: var(--font-body);
+  padding: clamp(48px, 7vw, 88px) var(--gutter);
+  overflow: hidden;
+}
+
+.integrations-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.integrations-eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  font-weight: 500;
+  color: #fff;
+  background: rgba(34, 197, 94, 0.12);
+  padding: 6px 12px;
+  border-radius: 999px;
+  margin-bottom: 28px;
+}
+
+.integrations-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.integrations-item {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 24px 20px;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.integrations-item:hover {
+  background: rgba(255, 255, 255, 0.07);
+  transform: translateY(-3px);
+}
+
+.integrations-label {
+  margin: 0 0 4px;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.integrations-desc {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+
+
+.integrations-eyebrow,
+.integrations-item {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.integrations-visible .integrations-eyebrow,
+.integrations-visible .integrations-item {
+  animation: integrationsSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: calc(var(--stagger, 0) * 0.08s);
+}
+
+@keyframes integrationsSlideUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/*  Responsive */
+
+@media (max-width: 700px) {
+  .integrations-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .integrations-eyebrow,
+  .integrations-item {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .integrations-item:hover {
+    transform: none;
+  }
+}

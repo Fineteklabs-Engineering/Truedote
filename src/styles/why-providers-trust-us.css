@@ -1,0 +1,166 @@
+.trust-section {
+  --color-bg: #fbfaff;
+  --color-ink: #16132b;
+  --color-muted: #6b6580;
+  --color-primary: #6c4ff2;
+  --color-primary-dark: #4e31d6;
+  --color-accent: #17d9c4;
+  --color-surface: #ffffff;
+  --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
+  --gutter: clamp(32px, 6vw, 96px);
+
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9)),
+    var(--color-bg) url('/images/why-us-image.jpg') center / cover no-repeat;
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  padding: clamp(64px, 10vw, 120px) var(--gutter);
+}
+
+.trust-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 96px;
+  align-items: center;
+}
+
+
+
+.trust-visual {
+  position: relative;
+}
+
+.trust-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3.6;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+
+.trust-badge-card {
+  position: absolute;
+  right: -24px;
+  bottom: -32px;
+  width: min(280px, 70%);
+  background: var(--color-primary-dark);
+  color: #fff;
+  border-radius: 18px;
+  padding: 22px 24px;
+  box-shadow: 0 20px 40px rgba(78, 49, 214, 0.3);
+}
+
+.trust-badge-year {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--color-accent);
+}
+
+.trust-badge-text {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+/* ---------- Copy side ---------- */
+
+.trust-eyebrow {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  border: 1.5px solid rgba(108, 79, 242, 0.4);
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+.trust-headline {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 3.2vw, 2.5rem);
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 36px;
+  color: var(--color-ink);
+  max-width: 480px;
+}
+
+.trust-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px 32px;
+}
+
+.trust-feature {
+  display: flex;
+  gap: 14px;
+}
+
+.trust-feature-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(108, 79, 242, 0.1);
+  color: var(--color-primary);
+}
+
+.trust-feature-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin: 0 0 6px;
+}
+
+.trust-feature-desc {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  .trust-section {
+    min-height: auto;
+  }
+
+  .trust-inner {
+    grid-template-columns: 1fr;
+    gap: 72px;
+  }
+
+  .trust-features {
+    grid-template-columns: 1fr;
+  }
+
+  .trust-badge-card {
+    right: 12px;
+    bottom: -24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .trust-badge-card {
+    right: 8px;
+    left: 8px;
+    width: auto;
+    bottom: -20px;
+  }
+}
