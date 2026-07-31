@@ -1,0 +1,214 @@
+.who-we-serve {
+  --color-bg: #fbfaff;
+  --color-ink: #16132b;
+  --color-muted: #6b6580;
+  --color-primary: #6c4ff2;
+  --color-primary-dark: #4e31d6;
+  --color-accent: #17d9c4;
+  --color-surface: #ffffff;
+  --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
+  --gutter: clamp(32px, 6vw, 96px);
+
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  padding: clamp(64px, 10vw, 120px) 0;
+  overflow: hidden;
+}
+
+.who-we-serve-inner {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+
+
+.who-we-serve-copy {
+  flex-shrink: 0;
+  width: min(420px, 90%);
+  padding-left: var(--gutter);
+}
+
+.who-we-serve-headline {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 3.2vw, 2.5rem);
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 16px;
+  color: var(--color-ink);
+}
+
+.who-we-serve-subcopy {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-muted);
+  margin: 0 0 32px;
+}
+
+.who-we-serve-cta {
+  display: inline-flex;
+  align-items: center;
+  background: var(--color-primary-dark);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 14px 26px;
+  border-radius: 999px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.who-we-serve-cta:hover,
+.who-we-serve-cta:focus-visible {
+  background: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(108, 79, 242, 0.3);
+}
+
+
+
+.who-we-serve-carousel-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+.who-we-serve-carousel {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 8px var(--gutter) 8px 0;
+}
+
+.who-we-serve-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.who-we-serve-card {
+  position: relative;
+  flex: 0 0 min(400px, 78vw);
+  aspect-ratio: 4 / 5;
+  border-radius: 20px;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+.who-we-serve-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.who-we-serve-card-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 28px 24px;
+  background: linear-gradient(
+    to top,
+    rgba(22, 19, 43, 0.95) 0%,
+    rgba(22, 19, 43, 0.75) 45%,
+    rgba(22, 19, 43, 0.15) 85%,
+    transparent 100%
+  );
+  color: #fff;
+}
+
+.who-we-serve-card-quote {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0 0 16px;
+}
+
+.who-we-serve-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.who-we-serve-card-name {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-accent);
+}
+
+.who-we-serve-card-role {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+
+.who-we-serve-arrow {
+  position: absolute;
+  top: 50%;
+  left: min(400px, 78vw);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-primary-dark);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 12px 28px rgba(78, 49, 214, 0.35);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.who-we-serve-arrow:hover,
+.who-we-serve-arrow:focus-visible {
+  background: var(--color-primary);
+  transform: translate(-50%, -50%) scale(1.06);
+}
+
+/*  Responsive  */
+
+@media (max-width: 1024px) {
+  .who-we-serve-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 40px;
+  }
+
+  .who-we-serve-copy {
+    width: auto;
+    padding: 0 var(--gutter);
+  }
+
+  .who-we-serve-carousel {
+    padding: 8px var(--gutter);
+    margin-left: 50px;
+  }
+
+  .who-we-serve-arrow {
+   
+  }
+}
+
+@media (max-width: 480px) {
+ 
+  .who-we-serve-card {
+    flex-basis: 82vw;
+  }
+
+  .who-we-serve-carousel {
+   
+    margin-left: 40px;
+  }
+
+  .who-we-serve-card-quote {
+    font-size: 0.88rem;
+  }
+}
